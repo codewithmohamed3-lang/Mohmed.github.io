@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محمد إسماعيل | AI Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b1120;
+    --text:#ffffff;
+      --card:#111827;
+        --accent:#00eaff;
+          --shadow:0 0 40px rgba(0,234,255,0.6);
+          }
+
+          body.light{
+            --bg:#f4f4f4;
+              --text:#111;
+                --card:#ffffff;
+                  --accent:#0066ff;
+                    --shadow:0 0 30px rgba(0,102,255,0.4);
+                    }
+
+                    *{
+                      margin:0;
+                        padding:0;
+                          box-sizing:border-box;
+                          }
+
+                          body{
+                            font-family:'Cairo',sans-serif;
+                              background:var(--bg);
+                                color:var(--text);
+                                  transition:0.4s;
+                                    text-align:center;
+                                      line-height:1.7;
+                                        scroll-behavior:smooth;
+                                        }
+
+                                        .toggle{
+                                          position:fixed;
+                                            top:15px;
+                                              left:15px;
+                                                padding:10px 18px;
+                                                  border:none;
+                                                    border-radius:25px;
+                                                      cursor:pointer;
+                                                        background:var(--card);
+                                                          color:var(--text);
+                                                            font-weight:bold;
+                                                              z-index:1000;
+                                                              }
+
+                                                              .container{
+                                                                padding:80px 20px;
+                                                                  max-width:1100px;
+                                                                    margin:auto;
+                                                                    }
+
+                                                                    h1{
+                                                                      font-size:36px;
+                                                                        font-weight:900;
+                                                                        }
+
+                                                                        .subtitle{
+                                                                          max-width:650px;
+                                                                            margin:15px auto 40px;
+                                                                              font-size:18px;
+                                                                                opacity:0.9;
+                                                                                }
+
+                                                                                /* صورة وبروفايل */
+                                                                                .profile{
+                                                                                  position:relative;
+                                                                                    margin:40px auto;
+                                                                                      width:260px;
+                                                                                      }
+
+                                                                                      .profile img{
+                                                                                        width:260px;
+                                                                                          height:260px;
+                                                                                            border-radius:50%;
+                                                                                              object-fit:cover;
+                                                                                                border:5px solid var(--accent);
+                                                                                                  box-shadow:var(--shadow);
+                                                                                                    transition:0.4s;
+                                                                                                    }
+
+                                                                                                    .profile img:hover{
+                                                                                                      transform:scale(1.05);
+                                                                                                      }
+
+                                                                                                      .ring{
+                                                                                                        position:absolute;
+                                                                                                          top:50%;
+                                                                                                            left:50%;
+                                                                                                              transform:translate(-50%,-50%);
+                                                                                                                border-radius:50%;
+                                                                                                                  border:2px solid var(--accent);
+                                                                                                                    animation:spin 12s linear infinite;
+                                                                                                                    }
+
+                                                                                                                    .ring.one{ width:300px; height:300px; }
+                                                                                                                    .ring.two{
+                                                                                                                      width:340px; height:340px;
+                                                                                                                        border-style:dashed;
+                                                                                                                          animation-direction:reverse;
+                                                                                                                            animation-duration:18s;
+                                                                                                                            }
+
+                                                                                                                            @keyframes spin{
+                                                                                                                              from{transform:translate(-50%,-50%) rotate(0deg);}
+                                                                                                                                to{transform:translate(-50%,-50%) rotate(360deg);}
+                                                                                                                                }
+
+                                                                                                                                /* سكشن */
+                                                                                                                                .section-title{
+                                                                                                                                  margin-top:100px;
+                                                                                                                                    font-size:28px;
+                                                                                                                                    }
+
+                                                                                                                                    /* الكروت */
+                                                                                                                                    .grid{
+                                                                                                                                      margin-top:40px;
+                                                                                                                                        display:grid;
+                                                                                                                                          grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+                                                                                                                                            gap:20px;
+                                                                                                                                            }
+
+                                                                                                                                            .card{
+                                                                                                                                              background:var(--card);
+                                                                                                                                                padding:25px;
+                                                                                                                                                  border-radius:20px;
+                                                                                                                                                    transition:0.4s;
+                                                                                                                                                      opacity:0;
+                                                                                                                                                        transform:translateY(40px);
+                                                                                                                                                        }
+
+                                                                                                                                                        .card.show{
+                                                                                                                                                          opacity:1;
+                                                                                                                                                            transform:translateY(0);
+                                                                                                                                                            }
+
+                                                                                                                                                            .card:hover{
+                                                                                                                                                              transform:translateY(-8px);
+                                                                                                                                                                box-shadow:var(--shadow);
+                                                                                                                                                                }
+
+                                                                                                                                                                /* التواصل */
+                                                                                                                                                                .contact a{
+                                                                                                                                                                  display:block;
+                                                                                                                                                                    margin:15px 0;
+                                                                                                                                                                      font-size:18px;
+                                                                                                                                                                        text-decoration:none;
+                                                                                                                                                                          color:var(--accent);
+                                                                                                                                                                            font-weight:bold;
+                                                                                                                                                                            }
+
+                                                                                                                                                                            /* عداد */
+                                                                                                                                                                            .counter{
+                                                                                                                                                                              margin-top:60px;
+                                                                                                                                                                                font-size:18px;
+                                                                                                                                                                                  opacity:0.8;
+                                                                                                                                                                                  }
+
+                                                                                                                                                                                  footer{
+                                                                                                                                                                                    margin-top:80px;
+                                                                                                                                                                                      padding:25px;
+                                                                                                                                                                                        font-size:14px;
+                                                                                                                                                                                          opacity:0.7;
+                                                                                                                                                                                          }
+
+                                                                                                                                                                                          @media(max-width:768px){
+                                                                                                                                                                                            .profile img{
+                                                                                                                                                                                                width:200px;
+                                                                                                                                                                                                    height:200px;
+                                                                                                                                                                                                      }
+                                                                                                                                                                                                      }
+                                                                                                                                                                                                      </style>
+                                                                                                                                                                                                      </head>
+
+                                                                                                                                                                                                      <body>
+
+                                                                                                                                                                                                      <button class="toggle" onclick="toggleMode()">تغيير الوضع</button>
+
+                                                                                                                                                                                                      <div class="container">
+
+                                                                                                                                                                                                      <h1>محمد إسماعيل</h1>
+                                                                                                                                                                                                      <p class="subtitle">
+                                                                                                                                                                                                      مطور ذكاء اصطناعي متخصص في Python وبناء أنظمة ذكية متقدمة.
+                                                                                                                                                                                                      </p>
+
+                                                                                                                                                                                                      <div class="profile">
+                                                                                                                                                                                                        <div class="ring one"></div>
+                                                                                                                                                                                                          <div class="ring two"></div>
+                                                                                                                                                                                                            <img src="profile.jpg" alt="Mohamed Ismail">
+                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                            <h2 class="section-title">الخدمات</h2>
+                                                                                                                                                                                                            <div class="grid">
+                                                                                                                                                                                                              <div class="card">تطوير أنظمة ذكاء اصطناعي متقدمة</div>
+                                                                                                                                                                                                                <div class="card">برمجة احترافية بلغة Python</div>
+                                                                                                                                                                                                                  <div class="card">أتمتة وتحليل بيانات</div>
+                                                                                                                                                                                                                  </div>
+
+                                                                                                                                                                                                                  <h2 class="section-title">مشاريعي</h2>
+                                                                                                                                                                                                                  <div class="grid">
+                                                                                                                                                                                                                    <div class="card">
+                                                                                                                                                                                                                        <h3>AI Chat System</h3>
+                                                                                                                                                                                                                            <p>نظام دردشة ذكي يعتمد على معالجة اللغة الطبيعية.</p>
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                <div class="card">
+                                                                                                                                                                                                                                    <h3>Data Analyzer</h3>
+                                                                                                                                                                                                                                        <p>أداة تحليل بيانات متقدمة باستخدام Python.</p>
+                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                            <div class="card">
+                                                                                                                                                                                                                                                <h3>Automation Bot</h3>
+                                                                                                                                                                                                                                                    <p>بوت أتمتة للمهام المتكررة وتوفير الوقت.</p>
+                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                      </div>
+
+                                                                                                                                                                                                                                                      <h2 class="section-title">تواصل معي</h2>
+                                                                                                                                                                                                                                                      <div class="contact">
+                                                                                                                                                                                                                                                        <a href="tel:01211291411">📞 01211291411</a>
+                                                                                                                                                                                                                                                          <a href="mailto:codewithmohamed3@gmail.com">📧 codewithmohamed3@gmail.com</a>
+                                                                                                                                                                                                                                                            <a href="https://wa.me/201211291411" target="_blank">💬 واتساب</a>
+                                                                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                                                                            <div class="counter">
+                                                                                                                                                                                                                                                              👁 عدد الزوار: <span id="visitor-count">0</span>
+                                                                                                                                                                                                                                                              </div>
+
+                                                                                                                                                                                                                                                              <footer>
+                                                                                                                                                                                                                                                              © 2026 محمد إسماعيل | جميع الحقوق محفوظة
+                                                                                                                                                                                                                                                              </footer>
+
+                                                                                                                                                                                                                                                              </div>
+
+                                                                                                                                                                                                                                                              <script>
+                                                                                                                                                                                                                                                              // الوضع الليلي
+                                                                                                                                                                                                                                                              function toggleMode(){
+                                                                                                                                                                                                                                                                document.body.classList.toggle("light");
+                                                                                                                                                                                                                                                                  localStorage.setItem("mode",
+                                                                                                                                                                                                                                                                      document.body.classList.contains("light") ? "light" : "dark"
+                                                                                                                                                                                                                                                                        );
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        if(localStorage.getItem("mode")==="light"){
+                                                                                                                                                                                                                                                                          document.body.classList.add("light");
+                                                                                                                                                                                                                                                                          }
+
+                                                                                                                                                                                                                                                                          // انيميشن عند النزول
+                                                                                                                                                                                                                                                                          const cards = document.querySelectorAll('.card');
+                                                                                                                                                                                                                                                                          window.addEventListener('scroll', ()=>{
+                                                                                                                                                                                                                                                                            const trigger = window.innerHeight * 0.85;
+                                                                                                                                                                                                                                                                              cards.forEach(card=>{
+                                                                                                                                                                                                                                                                                  const top = card.getBoundingClientRect().top;
+                                                                                                                                                                                                                                                                                      if(top < trigger){
+                                                                                                                                                                                                                                                                                            card.classList.add('show');
+                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                  });
+                                                                                                                                                                                                                                                                                                  });
+
+                                                                                                                                                                                                                                                                                                  // عداد زوار بسيط
+                                                                                                                                                                                                                                                                                                  let count = localStorage.getItem("visits");
+                                                                                                                                                                                                                                                                                                  if(!count){ count = 1; }
+                                                                                                                                                                                                                                                                                                  else{ count++; }
+                                                                                                                                                                                                                                                                                                  localStorage.setItem("visits", count);
+                                                                                                                                                                                                                                                                                                  document.getElementById("visitor-count").innerText = count;
+                                                                                                                                                                                                                                                                                                  </script>
+
+                                                                                                                                                                                                                                                                                                  </body>
+                                                                                                                                                                                                                                                                                                  </html>
